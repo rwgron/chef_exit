@@ -1,0 +1,6 @@
+default['tomcat']['tomcat_home'] = "/opt/tomcat"
+default['tomcat']['version'] = "7.0.61"
+default['tomcat']['dl_url'] = "http://ftp.byfly.by/pub/apache.org/tomcat/tomcat-7/v7.0.61/bin/apache-tomcat-7.0.61.zip"
+default['tomcat']['name'] = "apache-tomcat-7.0.61"
+default['tomcat']['deploy'] = "webapps"
+default['testweb']['app_repo'] = "http://www.cumulogic.com/download/Apps/testweb.zip"

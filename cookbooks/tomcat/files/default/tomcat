@@ -1,0 +1,34 @@
+#!/bin/bash
+# chkconfig: 345 20 80
+
+start(){
+	echo "Starting Tomcat.."
+	/opt/tomcat/apache-tomcat-7.0.61/bin/catalina.sh start &
+}
+
+stop(){
+	echo "Stopping Tomcat.."
+	/opt/tomcat/apache-tomcat-7.0.61/bin/shutdown.sh &
+}
+
+restart(){
+	stop
+	sleep 15
+	start
+}
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	restart)
+		restart
+		;;
+*)
+	echo "Usage: tomcat {start|stop|restart}"
+	exit 1
+esac
+exit 0

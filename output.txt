@@ -1,0 +1,195 @@
+[2015-04-28T16:55:02+03:00] INFO: Forking chef instance to converge...
+[2015-04-28T16:55:02+03:00] DEBUG: Fork successful. Waiting for new chef pid: 15514
+[2015-04-28T16:55:02+03:00] DEBUG: Forked instance now converging
+[2015-04-28T16:55:02+03:00] INFO: *** Chef 12.2.1 ***
+[2015-04-28T16:55:02+03:00] INFO: Chef-client pid: 15514
+[2015-04-28T16:55:02+03:00] DEBUG: Chef-client request_id: da224d71-3f09-4d23-bc4c-07c7121c0d24
+[2015-04-28T16:55:04+03:00] DEBUG: Building node object for epbyminw2468t2.epam.com
+[2015-04-28T16:55:04+03:00] DEBUG: Extracting run list from JSON attributes provided on command line
+[2015-04-28T16:55:04+03:00] INFO: Setting the run_list to ["recipe[tomcat::default]", "recipe[tomcat::tomcat_deploy]"] from CLI options
+[2015-04-28T16:55:04+03:00] DEBUG: Applying attributes from json file
+[2015-04-28T16:55:04+03:00] DEBUG: Platform is centos version 6.4
+[2015-04-28T16:55:04+03:00] INFO: Run List is [recipe[tomcat::default], recipe[tomcat::tomcat_deploy]]
+[2015-04-28T16:55:04+03:00] INFO: Run List expands to [tomcat::default, tomcat::tomcat_deploy]
+[2015-04-28T16:55:04+03:00] INFO: Starting Chef Run for epbyminw2468t2.epam.com
+[2015-04-28T16:55:04+03:00] INFO: Running start handlers
+[2015-04-28T16:55:04+03:00] INFO: Start handlers complete.
+[2015-04-28T16:55:04+03:00] DEBUG: No chefignore file found at /usr/exittask/chefignore no files will be ignored
+[2015-04-28T16:55:04+03:00] DEBUG: Cookbooks to compile: [:java, :tomcat]
+[2015-04-28T16:55:04+03:00] DEBUG: Loading cookbook java's library file: /usr/exittask/cookbooks/java/libraries/helpers.rb
+[2015-04-28T16:55:04+03:00] DEBUG: Loading cookbook java's library file: /usr/exittask/cookbooks/java/libraries/matchers.rb
+[2015-04-28T16:55:04+03:00] DEBUG: Node epbyminw2468t2.epam.com loading cookbook java's attribute file /usr/exittask/cookbooks/java/attributes/default.rb
+[2015-04-28T16:55:04+03:00] DEBUG: Loading Attribute java::default
+[2015-04-28T16:55:04+03:00] DEBUG: Node epbyminw2468t2.epam.com loading cookbook tomcat's attribute file /usr/exittask/cookbooks/tomcat/attributes/default.rb
+[2015-04-28T16:55:04+03:00] DEBUG: Loading Attribute tomcat::default
+[2015-04-28T16:55:04+03:00] DEBUG: Loading cookbook java's providers from /usr/exittask/cookbooks/java/providers/alternatives.rb
+[2015-04-28T16:55:04+03:00] DEBUG: Loaded contents of /usr/exittask/cookbooks/java/providers/alternatives.rb into a provider named java_alternatives defined in Chef::Provider::JavaAlternatives
+[2015-04-28T16:55:04+03:00] DEBUG: Loading cookbook java's providers from /usr/exittask/cookbooks/java/providers/ark.rb
+[2015-04-28T16:55:04+03:00] DEBUG: Loaded contents of /usr/exittask/cookbooks/java/providers/ark.rb into a provider named java_ark defined in Chef::Provider::JavaArk
+[2015-04-28T16:55:04+03:00] DEBUG: Loading cookbook java's resources from /usr/exittask/cookbooks/java/resources/alternatives.rb
+[2015-04-28T16:55:04+03:00] DEBUG: Loaded contents of /usr/exittask/cookbooks/java/resources/alternatives.rb into a resource named java_alternatives defined in Chef::Resource::JavaAlternatives
+[2015-04-28T16:55:04+03:00] DEBUG: Loading cookbook java's resources from /usr/exittask/cookbooks/java/resources/ark.rb
+[2015-04-28T16:55:04+03:00] DEBUG: Loaded contents of /usr/exittask/cookbooks/java/resources/ark.rb into a resource named java_ark defined in Chef::Resource::JavaArk
+[2015-04-28T16:55:04+03:00] DEBUG: Loading Recipe tomcat::default via include_recipe
+[2015-04-28T16:55:04+03:00] DEBUG: Found recipe default in cookbook tomcat
+[2015-04-28T16:55:04+03:00] DEBUG: Loading Recipe java::default via include_recipe
+[2015-04-28T16:55:04+03:00] DEBUG: Found recipe default in cookbook java
+[2015-04-28T16:55:04+03:00] DEBUG: Loading Recipe java::set_attributes_from_version via include_recipe
+[2015-04-28T16:55:04+03:00] DEBUG: Found recipe set_attributes_from_version in cookbook java
+[2015-04-28T16:55:04+03:00] DEBUG: Loading Recipe java::openjdk via include_recipe
+[2015-04-28T16:55:04+03:00] DEBUG: Found recipe openjdk in cookbook java
+[2015-04-28T16:55:04+03:00] DEBUG: Loading Recipe java::set_java_home via include_recipe
+[2015-04-28T16:55:04+03:00] DEBUG: Found recipe set_java_home in cookbook java
+[2015-04-28T16:55:04+03:00] DEBUG: Loading Recipe tomcat::tomcat_deploy via include_recipe
+[2015-04-28T16:55:04+03:00] DEBUG: Found recipe tomcat_deploy in cookbook tomcat
+[2015-04-28T16:55:04+03:00] DEBUG: Loading from cookbook_path: /usr/exittask/cookbooks
+[2015-04-28T16:55:04+03:00] DEBUG: Converging node epbyminw2468t2.epam.com
+[2015-04-28T16:55:04+03:00] INFO: Processing yum_package[java-1.6.0-openjdk] action install (java::openjdk line 46)
+[2015-04-28T16:55:04+03:00] DEBUG: providers for generic yum_package resource enabled on node include: [Chef::Provider::Package::Yum]
+[2015-04-28T16:55:04+03:00] DEBUG: providers that refused resource yum_package[java-1.6.0-openjdk] were: []
+[2015-04-28T16:55:04+03:00] DEBUG: providers that support resource yum_package[java-1.6.0-openjdk] include: [Chef::Provider::Package::Yum]
+[2015-04-28T16:55:04+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::Package::Yum]
+[2015-04-28T16:55:07+03:00] DEBUG: yum_package[java-1.6.0-openjdk] checking yum info for java-1.6.0-openjdk
+[2015-04-28T16:55:07+03:00] DEBUG: yum_package[java-1.6.0-openjdk] installed version: ["1.6.0.34-1.13.6.1.el6_6"] candidate version: 1.6.0.35-1.13.7.1.el6_6
+[2015-04-28T16:55:07+03:00] DEBUG: yum_package[java-1.6.0-openjdk] java-1.6.0-openjdk 1.6.0.34-1.13.6.1.el6_6 already installed
+[2015-04-28T16:55:07+03:00] DEBUG: yum_package[java-1.6.0-openjdk] is already installed - nothing to do
+[2015-04-28T16:55:07+03:00] INFO: Processing yum_package[java-1.6.0-openjdk-devel] action install (java::openjdk line 46)
+[2015-04-28T16:55:07+03:00] DEBUG: providers for generic yum_package resource enabled on node include: [Chef::Provider::Package::Yum]
+[2015-04-28T16:55:07+03:00] DEBUG: providers that refused resource yum_package[java-1.6.0-openjdk-devel] were: []
+[2015-04-28T16:55:07+03:00] DEBUG: providers that support resource yum_package[java-1.6.0-openjdk-devel] include: [Chef::Provider::Package::Yum]
+[2015-04-28T16:55:07+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::Package::Yum]
+[2015-04-28T16:55:07+03:00] DEBUG: yum_package[java-1.6.0-openjdk-devel] checking yum info for java-1.6.0-openjdk-devel
+[2015-04-28T16:55:07+03:00] DEBUG: yum_package[java-1.6.0-openjdk-devel] installed version: ["1.6.0.34-1.13.6.1.el6_6"] candidate version: 1.6.0.35-1.13.7.1.el6_6
+[2015-04-28T16:55:07+03:00] DEBUG: yum_package[java-1.6.0-openjdk-devel] java-1.6.0-openjdk-devel 1.6.0.34-1.13.6.1.el6_6 already installed
+[2015-04-28T16:55:07+03:00] DEBUG: yum_package[java-1.6.0-openjdk-devel] is already installed - nothing to do
+[2015-04-28T16:55:07+03:00] INFO: Processing java_alternatives[set-java-alternatives] action set (java::openjdk line 52)
+[2015-04-28T16:55:07+03:00] DEBUG: providers for generic java_alternatives resource enabled on node include: []
+[2015-04-28T16:55:07+03:00] DEBUG: providers that refused resource java_alternatives[set-java-alternatives] were: []
+[2015-04-28T16:55:07+03:00] DEBUG: providers that support resource java_alternatives[set-java-alternatives] include: []
+[2015-04-28T16:55:07+03:00] DEBUG: no providers supported the resource, falling back to enabled handlers
+[2015-04-28T16:55:07+03:00] DEBUG: providers that survived replacement include: []
+[2015-04-28T16:55:07+03:00] DEBUG: dynamic provider resolver FAILED to resolve a provider
+[2015-04-28T16:55:07+03:00] DEBUG: Platform centos version 6.4 found
+[2015-04-28T16:55:07+03:00] DEBUG: Skipping setting alternative for ControlPanel. Command /usr/lib/jvm/java-1.6.0/bin/ControlPanel does not exist.
+[2015-04-28T16:55:07+03:00] DEBUG: Skipping setting alternative for HtmlConverter. Command /usr/lib/jvm/java-1.6.0/bin/HtmlConverter does not exist.
+[2015-04-28T16:55:07+03:00] DEBUG: Skipping setting alternative for javaws. Command /usr/lib/jvm/java-1.6.0/bin/javaws does not exist.
+[2015-04-28T16:55:07+03:00] DEBUG: Skipping setting alternative for jcontrol. Command /usr/lib/jvm/java-1.6.0/bin/jcontrol does not exist.
+[2015-04-28T16:55:08+03:00] DEBUG: Skipping setting alternative for jvisualvm. Command /usr/lib/jvm/java-1.6.0/bin/jvisualvm does not exist.
+[2015-04-28T16:55:08+03:00] INFO: Processing ruby_block[set-env-java-home] action run (java::set_java_home line 19)
+[2015-04-28T16:55:08+03:00] DEBUG: providers for generic ruby_block resource enabled on node include: [Chef::Provider::RubyBlock]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that refused resource ruby_block[set-env-java-home] were: []
+[2015-04-28T16:55:08+03:00] DEBUG: providers that support resource ruby_block[set-env-java-home] include: [Chef::Provider::RubyBlock]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::RubyBlock]
+[2015-04-28T16:55:08+03:00] INFO: ruby_block[set-env-java-home] called
+[2015-04-28T16:55:08+03:00] INFO: Processing directory[/etc/profile.d] action create (java::set_java_home line 26)
+[2015-04-28T16:55:08+03:00] DEBUG: providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that refused resource directory[/etc/profile.d] were: []
+[2015-04-28T16:55:08+03:00] DEBUG: providers that support resource directory[/etc/profile.d] include: [Chef::Provider::Directory]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::Directory]
+[2015-04-28T16:55:08+03:00] DEBUG: found target_mode == current_mode, not updating mode
+[2015-04-28T16:55:08+03:00] DEBUG: found target_uid == nil, so no owner was specified on resource, not managing owner
+[2015-04-28T16:55:08+03:00] DEBUG: found target_gid == nil, so no group was specified on resource, not managing group
+[2015-04-28T16:55:08+03:00] INFO: Processing file[/etc/profile.d/jdk.sh] action create (java::set_java_home line 30)
+[2015-04-28T16:55:08+03:00] DEBUG: providers for generic file resource enabled on node include: [Chef::Provider::File]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that refused resource file[/etc/profile.d/jdk.sh] were: []
+[2015-04-28T16:55:08+03:00] DEBUG: providers that support resource file[/etc/profile.d/jdk.sh] include: [Chef::Provider::File]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::File]
+[2015-04-28T16:55:08+03:00] DEBUG: file[/etc/profile.d/jdk.sh] checksumming file at /etc/profile.d/jdk.sh.
+[2015-04-28T16:55:08+03:00] DEBUG: calculating checksum of /etc/profile.d/.jdk.sh20150428-15514-nkmec2 to compare with 3118253a76ab98a87c73fe55867263015a2d944f1c0dc73958ed8a9885334c00
+[2015-04-28T16:55:08+03:00] DEBUG: found target_mode == current_mode, not updating mode
+[2015-04-28T16:55:08+03:00] DEBUG: found target_uid == nil, so no owner was specified on resource, not managing owner
+[2015-04-28T16:55:08+03:00] DEBUG: found target_gid == nil, so no group was specified on resource, not managing group
+[2015-04-28T16:55:08+03:00] INFO: Processing remote_file[apache-tomcat-7.0.61.zip] action create_if_missing (tomcat::default line 17)
+[2015-04-28T16:55:08+03:00] DEBUG: remote_file[apache-tomcat-7.0.61.zip] exists at /tmp/apache-tomcat-7.0.61.zip taking no action.
+[2015-04-28T16:55:08+03:00] INFO: Processing directory[/opt/tomcat] action create (tomcat::default line 24)
+[2015-04-28T16:55:08+03:00] DEBUG: providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that refused resource directory[/opt/tomcat] were: []
+[2015-04-28T16:55:08+03:00] DEBUG: providers that support resource directory[/opt/tomcat] include: [Chef::Provider::Directory]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::Directory]
+[2015-04-28T16:55:08+03:00] DEBUG: found target_mode == nil, so no mode was specified on resource, not managing mode
+[2015-04-28T16:55:08+03:00] DEBUG: found target_uid == nil, so no owner was specified on resource, not managing owner
+[2015-04-28T16:55:08+03:00] DEBUG: found target_gid == nil, so no group was specified on resource, not managing group
+[2015-04-28T16:55:08+03:00] INFO: Processing cookbook_file[tomcat.conf] action create_if_missing (tomcat::default line 29)
+[2015-04-28T16:55:08+03:00] DEBUG: cookbook_file[tomcat.conf] exists at /etc/httpd/conf.d/tomcat.conf taking no action.
+[2015-04-28T16:55:08+03:00] INFO: Processing bash[unzip tomcat] action run (tomcat::default line 38)
+[2015-04-28T16:55:08+03:00] DEBUG: providers for generic bash resource enabled on node include: [Chef::Provider::Script]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that refused resource bash[unzip tomcat] were: []
+[2015-04-28T16:55:08+03:00] DEBUG: providers that support resource bash[unzip tomcat] include: [Chef::Provider::Script]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::Script]
+[2015-04-28T16:55:08+03:00] INFO: bash[unzip tomcat] ran successfully
+[2015-04-28T16:55:08+03:00] INFO: Processing cookbook_file[tomcat] action create_if_missing (tomcat::default line 48)
+[2015-04-28T16:55:08+03:00] DEBUG: cookbook_file[tomcat] exists at /etc/init.d/tomcat taking no action.
+[2015-04-28T16:55:08+03:00] INFO: Processing execute[add_chkconfig] action run (tomcat::default line 56)
+[2015-04-28T16:55:08+03:00] DEBUG: providers for generic execute resource enabled on node include: [Chef::Provider::Execute]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that refused resource execute[add_chkconfig] were: []
+[2015-04-28T16:55:08+03:00] DEBUG: providers that support resource execute[add_chkconfig] include: [Chef::Provider::Execute]
+[2015-04-28T16:55:08+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::Execute]
+[2015-04-28T16:55:08+03:00] INFO: execute[add_chkconfig] ran successfully
+[2015-04-28T16:55:08+03:00] INFO: Processing remote_file[testweb.zip] action create_if_missing (tomcat::tomcat_deploy line 7)
+[2015-04-28T16:55:08+03:00] DEBUG: remote_file[testweb.zip] checking for changes
+[2015-04-28T16:55:08+03:00] DEBUG: Cache control headers: {}
+[2015-04-28T16:55:08+03:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2015-04-28T16:55:08+03:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2015-04-28T16:55:08+03:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2015-04-28T16:55:08+03:00] DEBUG: Initiating GET to http://www.cumulogic.com/download/Apps/testweb.zip
+[2015-04-28T16:55:08+03:00] DEBUG: ---- HTTP Request Header Data: ----
+[2015-04-28T16:55:08+03:00] DEBUG: Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+[2015-04-28T16:55:08+03:00] DEBUG: ---- End HTTP Request Header Data ----
+[2015-04-28T16:55:09+03:00] DEBUG: ---- HTTP Status and Header Data: ----
+[2015-04-28T16:55:09+03:00] DEBUG: HTTP 1.1 200 OK
+[2015-04-28T16:55:09+03:00] DEBUG: date: Tue, 28 Apr 2015 11:51:49 GMT
+[2015-04-28T16:55:09+03:00] DEBUG: server: Apache
+[2015-04-28T16:55:09+03:00] DEBUG: last-modified: Thu, 16 Jan 2014 23:23:42 GMT
+[2015-04-28T16:55:09+03:00] DEBUG: etag: "100020-6c6-4f01eb75b7ed7"
+[2015-04-28T16:55:09+03:00] DEBUG: accept-ranges: bytes
+[2015-04-28T16:55:09+03:00] DEBUG: cache-control: max-age=0
+[2015-04-28T16:55:09+03:00] DEBUG: expires: Tue, 28 Apr 2015 11:51:49 GMT
+[2015-04-28T16:55:09+03:00] DEBUG: vary: Accept-Encoding
+[2015-04-28T16:55:09+03:00] DEBUG: content-encoding: gzip
+[2015-04-28T16:55:09+03:00] DEBUG: content-length: 1685
+[2015-04-28T16:55:09+03:00] DEBUG: connection: close
+[2015-04-28T16:55:09+03:00] DEBUG: content-type: application/zip
+[2015-04-28T16:55:09+03:00] DEBUG: ---- End HTTP Status/Header Data ----
+[2015-04-28T16:55:09+03:00] DEBUG: Streaming download from http://www.cumulogic.com/download/Apps/testweb.zip to tempfile /tmp/chef-rest20150428-15514-eti8ww
+[2015-04-28T16:55:09+03:00] DEBUG: Initializing gzip stream deflator
+[2015-04-28T16:55:09+03:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::ValidateContentLength::ContentLengthCounter#handle_chunk
+[2015-04-28T16:55:09+03:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::Decompressor::GzipInflater#handle_chunk
+[2015-04-28T16:55:09+03:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_stream_complete
+[2015-04-28T16:55:09+03:00] DEBUG: Content-Length validated correctly.
+[2015-04-28T16:55:09+03:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_stream_complete
+[2015-04-28T16:55:09+03:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_stream_complete
+[2015-04-28T16:55:09+03:00] DEBUG: touching /tmp/testweb.zip to create it
+[2015-04-28T16:55:09+03:00] INFO: remote_file[testweb.zip] created file /tmp/testweb.zip
+[2015-04-28T16:55:09+03:00] DEBUG: calculating checksum of /tmp/chef-rest20150428-15514-eti8ww to compare with 
+[2015-04-28T16:55:09+03:00] DEBUG: reading modes from /tmp/testweb.zip file
+[2015-04-28T16:55:09+03:00] DEBUG: applying mode = 644, uid = 0, gid = 0 to /tmp/chef-rest20150428-15514-eti8ww
+[2015-04-28T16:55:09+03:00] DEBUG: moving temporary file /tmp/chef-rest20150428-15514-eti8ww into place at /tmp/testweb.zip
+[2015-04-28T16:55:09+03:00] INFO: remote_file[testweb.zip] updated file contents /tmp/testweb.zip
+[2015-04-28T16:55:09+03:00] DEBUG: found target_mode == nil, so no mode was specified on resource, not managing mode
+[2015-04-28T16:55:09+03:00] DEBUG: found target_uid == nil, so no owner was specified on resource, not managing owner
+[2015-04-28T16:55:09+03:00] DEBUG: found target_gid == nil, so no group was specified on resource, not managing group
+[2015-04-28T16:55:09+03:00] DEBUG: Restoring selinux security content with /sbin/restorecon -R "/tmp/testweb.zip"
+[2015-04-28T16:55:09+03:00] INFO: Processing execute[stop tomcat] action run (tomcat::tomcat_deploy line 13)
+[2015-04-28T16:55:09+03:00] DEBUG: providers for generic execute resource enabled on node include: [Chef::Provider::Execute]
+[2015-04-28T16:55:09+03:00] DEBUG: providers that refused resource execute[stop tomcat] were: []
+[2015-04-28T16:55:09+03:00] DEBUG: providers that support resource execute[stop tomcat] include: [Chef::Provider::Execute]
+[2015-04-28T16:55:09+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::Execute]
+[2015-04-28T16:55:09+03:00] INFO: execute[stop tomcat] ran successfully
+[2015-04-28T16:55:09+03:00] INFO: Processing bash[unzip testweb] action run (tomcat::tomcat_deploy line 17)
+[2015-04-28T16:55:09+03:00] DEBUG: providers for generic bash resource enabled on node include: [Chef::Provider::Script]
+[2015-04-28T16:55:09+03:00] DEBUG: providers that refused resource bash[unzip testweb] were: []
+[2015-04-28T16:55:09+03:00] DEBUG: providers that support resource bash[unzip testweb] include: [Chef::Provider::Script]
+[2015-04-28T16:55:09+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::Script]
+[2015-04-28T16:55:09+03:00] INFO: bash[unzip testweb] ran successfully
+[2015-04-28T16:55:09+03:00] INFO: Processing execute[start tomcat] action run (tomcat::tomcat_deploy line 24)
+[2015-04-28T16:55:09+03:00] DEBUG: providers for generic execute resource enabled on node include: [Chef::Provider::Execute]
+[2015-04-28T16:55:09+03:00] DEBUG: providers that refused resource execute[start tomcat] were: []
+[2015-04-28T16:55:09+03:00] DEBUG: providers that support resource execute[start tomcat] include: [Chef::Provider::Execute]
+[2015-04-28T16:55:09+03:00] DEBUG: providers that survived replacement include: [Chef::Provider::Execute]
+[2015-04-28T16:55:09+03:00] INFO: execute[start tomcat] ran successfully
+[2015-04-28T16:55:09+03:00] INFO: Chef Run complete in 5.358044914 seconds
+[2015-04-28T16:55:09+03:00] INFO: Skipping removal of unused files from the cache
+[2015-04-28T16:55:09+03:00] INFO: Running report handlers
+[2015-04-28T16:55:09+03:00] INFO: Report handlers complete
+[2015-04-28T16:55:09+03:00] DEBUG: Forked instance successfully reaped (pid: 15514)
+[2015-04-28T16:55:09+03:00] DEBUG: Exiting
